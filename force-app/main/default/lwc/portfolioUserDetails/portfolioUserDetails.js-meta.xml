@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
-    <apiVersion>63.0</apiVersion>
-    <isExposed>false</isExposed>
+  <apiVersion>63.0</apiVersion>
+  <isExposed>true</isExposed>
+
+  <targets>
+    <!-- Community (Experience Cloud) -->
+    <target>lightningCommunity__Page</target>
+    <target>lightningCommunity__Default</target>
+
+    <!-- Standard Lightning App Builder -->
+    <target>lightning__AppPage</target>
+    <target>lightning__RecordPage</target>
+    <target>lightning__HomePage</target>
+  </targets>
+
+  <targetConfigs>
+    <!-- Properties only where supported -->
+    <targetConfig targets="lightning__AppPage,lightning__RecordPage,lightning__HomePage">
+      <property name="recordId" type="String" label="Preview Record Id"/>
+      <property name="objectApiName" type="String" label="Object API Name"/>
+      <property name="resumeUrl" type="String" label="Resume URL"/>
+    </targetConfig>
+  </targetConfigs>
 </LightningComponentBundle>
