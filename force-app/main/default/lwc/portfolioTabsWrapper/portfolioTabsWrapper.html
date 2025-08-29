@@ -12,7 +12,9 @@
             <!-- Portfolio Personal Projects Component -->
         </lightning-tab>
         <lightning-tab label="Work Experience">
-            Work Experience Content 
+            <template if:true={recordId}>
+            <c-portfolio-work-experience record-id={recordId}> </c-portfolio-work-experience>
+            </template>
         </lightning-tab>
                 <lightning-tab label="Skills">
             Skills Content 
