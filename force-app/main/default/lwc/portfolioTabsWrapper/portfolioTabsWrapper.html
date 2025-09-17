@@ -1,33 +1,39 @@
 <template>
     <div>
-    <lightning-tabset variant="scoped">
-        <lightning-tab label="Summary">
-            <template if:true={recordId}>
-                 <c-portfolio-summary record-id={recordId} object-api-name={objectApiName}></c-portfolio-summary>
-            </template>
+        <lightning-tabset variant="scoped">
+            <lightning-tab label="Summary">
+                <template if:true={recordId}>
+                    <c-portfolio-summary record-id={recordId} object-api-name={objectApiName}></c-portfolio-summary>
+                </template>
                 <!-- Portfolio Summary Component -->
-        </lightning-tab>
-        <lightning-tab label="Personal Projects">
-           <c-portfolio-personal-projects></c-portfolio-personal-projects>
-            <!-- Portfolio Personal Projects Component -->
-        </lightning-tab>
-        <lightning-tab label="Work Experience">
-            <template if:true={recordId}>
-            <c-portfolio-work-experience record-id={recordId}> </c-portfolio-work-experience>
-            </template>
-        </lightning-tab>
-                <lightning-tab label="Skills">
-            Skills Content 
-        </lightning-tab>
-                <lightning-tab label="Education">
-            Education Content 
-        </lightning-tab>
-                <lightning-tab label="Certifications">
-            Certifications Content 
-        </lightning-tab>
-                <lightning-tab label="Others">
-            Other Content 
-        </lightning-tab>
-    </lightning-tabset>
+            </lightning-tab>
+            <lightning-tab label="Personal Projects">
+                <c-portfolio-personal-projects></c-portfolio-personal-projects>
+                <!-- Portfolio Personal Projects Component -->
+            </lightning-tab>
+            <lightning-tab label="Work Experience">
+                <template if:true={recordId}>
+                    <c-portfolio-work-experience record-id={recordId}> </c-portfolio-work-experience>
+                </template>
+            </lightning-tab>
+            <lightning-tab label="Skills">
+                <template if:true={recordId}>
+                    <c-portfolio-skills record-id={recordId}> </c-portfolio-skills>
+                </template>
+
+            </lightning-tab>
+            <lightning-tab label="Education">
+                <template if:true={recordId}>
+                    <c-portfolio-education record-id={recordId}> </c-portfolio-education>
+                </template>
+
+            </lightning-tab>
+            <lightning-tab label="Certifications">
+                Certifications Content
+            </lightning-tab>
+            <lightning-tab label="Others">
+                Other Content
+            </lightning-tab>
+        </lightning-tabset>
     </div>
 </template>
